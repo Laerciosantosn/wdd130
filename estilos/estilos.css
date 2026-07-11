@@ -1,3 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #233;
+    background: #d9d9d9;
+    margin: 0;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -13,14 +27,42 @@ h1 {
     color: darkblue;
 }
 
-img {
+main img {
     width: 150px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid tgb(0 0 0 / 0.2);
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
 
 p {
     padding: 10px;
+}
+
+main {
+    max-width: 840px;
+}
+
+aside {
+    width: 500px;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    background-color: azure;
+    color: black;
+    text-align: center;
+
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    padding: 2px;
+    box-shadow: 0 0 30px grey mnnnn;
+}
+
+footer {
+    margin-top: 16px;
+    border-top: 1px solid #000;
+    text-align: center;
 }
