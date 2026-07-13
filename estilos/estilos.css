@@ -1,3 +1,8 @@
+:root {
+    --border: 1px solid rgb(0 0 0 / 0.2);
+    --fonte: Arial, Helvetica, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte);
     line-height: 1.5;
     color: #233;
     background: #d9d9d9;
@@ -30,7 +35,7 @@ h1 {
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid rgb(0 0 0 / 0.2);
+    border: var(--border);
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
@@ -46,7 +51,7 @@ main {
 aside {
     width: 500px;
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: var(--border);
     padding: 8px;
     background-color: azure;
     color: black;
