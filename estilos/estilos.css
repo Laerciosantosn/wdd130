@@ -3,6 +3,7 @@
     --fonte: Arial, Helvetica, sans-serif;
 }
 
+/* Reseta o CSS */
 * {
     margin: 0;
     padding: 0;
@@ -46,17 +47,27 @@ p {
 
 main {
     max-width: 840px;
+    padding: 1rem;
+}
+
+main img {
+    float: right;
 }
 
 aside {
     width: 500px;
     margin: 1rem;
     border: var(--border);
-    padding: 8px;
     background-color: azure;
     color: black;
     text-align: center;
+    position: relative;
+}
 
+aside h2 {
+    position: absolute;
+    top: 70px;
+    left: 185px;
 }
 
 aside img {
@@ -70,4 +81,14 @@ footer {
     margin-top: 16px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Seletores de Classe */
+
+.caixa {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
