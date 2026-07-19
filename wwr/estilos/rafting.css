@@ -1,7 +1,8 @@
 :root {
-    --cor-primaria: #055a05;
-    --cor-secundaria: #f4a261;
+    --cor-primaria: #0A3D62;
+    --cor-secundaria: #F1C40F;
     --cor-destaque1: #264653;
+    --cor-texto: #f0f0f0;
     --font-titulo: 'Times New Roman', Times, serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
@@ -18,10 +19,21 @@ body {
 }
 
 header,
-main,
 footer {
-    width: 840px;
+    width: 100vw;
     margin: 0 auto;
+    background-color: var(--cor-primaria);
+}
+
+li {
+    margin: 16px;
+}
+
+li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin: 16px;
+    padding: 8px 0 8px 0;
 }
 
 h1,
@@ -35,12 +47,8 @@ nav,
 p,
 section,
 article {
-    margin: 16px;
+    margin: 16px 0 16px 0;
     padding: 8px;
-}
-
-footer a {
-    text-decoration: none;
 }
 
 .hero {
@@ -67,10 +75,23 @@ footer a {
 
 .hero article {
     position: absolute;
+    bottom: 20px;
+    width: 850px;
+    left: 50%;
+    transform: translate(-50%);
     background-color: var(--cor-secundaria);
+    opacity: 0.9;
 }
 
 .hero article img {
     float: right;
     width: 125px;
+}
+
+footer p {
+    color: var(--cor-texto);
+}
+
+footer a {
+    text-decoration: none;
 }
