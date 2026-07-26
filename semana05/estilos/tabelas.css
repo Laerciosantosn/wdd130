@@ -1,0 +1,48 @@
+:root {
+    --cor-primaria: #fff;
+    --cor-secundaria: black;
+    --cor-terciaria: rgb(140 140 140);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid var(--cor-terciaria);
+    letter-spacing: 1px;
+}
+
+th,
+td {
+    border: 1px solid var(--cor-terciaria);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+td {
+    transition: backgroundo-color 0.3s ease, transform 0.3s ease;
+}
+
+td:hover {
+    background-color: var(--cor-terciaria);
+}
+
+thead th,
+tfoot tr {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+
+}
+
+tbody {
+    text-align: center;
+}
