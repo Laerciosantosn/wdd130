@@ -33,6 +33,55 @@ header img {
 
 }
 
+.contato {
+    margin: 16px 0;
+}
+
+.contato h1 {
+    margin: 16px 0;
+}
+
+.contato p {
+    margin: 8px 0;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.forme-conteiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 0 16px;
+}
+
+.forme-conteiner iframe {
+    align-self: center;
+}
+
+label {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
 nav {
     align-content: center;
 }
@@ -136,10 +185,18 @@ h2 {
     grid-area: 2 /3;
 }
 
-.aventura {
+.aventura,
+.funcionarios {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
+}
+
+.aventura {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.funcionarios {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 section h2 {
