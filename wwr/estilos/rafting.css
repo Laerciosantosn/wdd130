@@ -3,7 +3,12 @@
     --cor-secundaria: #F1C40F;
     --cor-destaque1: #264653;
     --cor-texto: #f0f0f0;
-    --font-titulo: 'Times New Roman', Times, serif;
+    --cor-teciaria: #2e6993;
+    --font-titulo: 'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
 
@@ -11,11 +16,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 body {
     font-family: var(--fonte-body);
     color: var(--cor-destaque1);
+    /* color: #215a83; */
 }
 
 header {
@@ -98,18 +105,24 @@ footer {
 }
 
 li {
-    background-color: var(--cor-texto);
     border: 1px solid var(--cor-destaque1);
-    padding: 8px;
     list-style-type: none;
 }
 
 li a {
+    background-color: var(--cor-texto);
     color: var(--cor-primaria);
     font-weight: 700;
     text-decoration: none;
-    margin: 16px;
-    padding: 8px 0 8px 0;
+    margin: 2px;
+    padding: 12px 10px;
+    border-radius: 4px;
+}
+
+li a:hover {
+    background-color: #264653;
+    border: 2px solid var(--cor-texto);
+    color: var(--cor-texto);
 }
 
 h1,
@@ -119,14 +132,23 @@ h2 {
     text-align: center;
 }
 
-.hero {
+.hero,
+.hero-passeios {
     position: relative;
 }
 
-.hero img {
+.hero img,
+.hero-passeios img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -138,16 +160,132 @@ h2 {
     opacity: 0.7;
     background-color: var(--cor-destaque1);
     color: #fff;
-    /* Texto branco - certifique-se de que haja contraste suficiente com a cor de fundo */
+}
+
+.banner {
+    position: absolute;
+    display: grid;
+    top: 50px;
+    left: 100px;
+    width: 450px;
+    height: auto;
+    border-radius: 16px;
+    padding: 24px;
+    opacity: 0.8;
+    background-color: var(--cor-texto);
+    border: 1px solid var(--cor-destaque1);
+}
+
+.banner h1,
+.banner p,
+.banner a {
+    padding: 10px;
+}
+
+.banner h1 {
+    color: var(--cor-primaria);
+    font-weight: 800;
+    font-size: 2em;
+    text-align: left;
+}
+
+.banner p {
+    color: var(--cor-destaque1);
+    font-size: 1.1em;
+}
+
+.banner p,
+.banner a,
+table {
+    letter-spacing: 1px;
+}
+
+.banner div {
+    padding-left: 10px;
+    margin: 16px 0;
+}
+
+.banner a {
+    border-radius: 8px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: 600;
+    align-self: center;
+    justify-self: left;
+}
+
+#containe-passeios h2,
+#table-containe h2 {
+    width: 100%;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 1.6em;
+    background-color: #0A3D62;
+    color: #f0f0f0;
+    padding: 8px 0;
+}
+
+.passeios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 32px;
+    gap: 20PX;
+}
+
+.passeios aside {
+    display: flex;
+    border: 1px solid var(--cor-destaque1);
+    border-radius: 8px;
+}
+
+.passeios aside img {
+    width: 200px;
+    height: auto;
+    object-fit: fill;
+}
+
+.passeios h4,
+.passeios p {
+    padding: 8px;
+}
+
+/* CONTINUAR A ESTILIZAÇÃO DA PAGINA PASSEIOS */
+
+#table-containe {
+    padding: 64px 0;
+}
+
+table {
+    margin: 0 auto;
+    border: 2px solid var(--cor-primaria);
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+    border: 2px solid var(--cor-teciaria);
+    padding: 12px 16px;
+    text-align: center;
+}
+
+thead th {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    font-weight: 700;
 }
 
 .hero article {
     position: absolute;
     bottom: 20px;
-    width: 850px;
+    width: 750px;
     left: 50%;
     transform: translate(-50%);
     background-color: var(--cor-secundaria);
+    padding: 16px;
     opacity: 0.9;
 }
 
@@ -175,14 +313,17 @@ h2 {
     grid-area: 2 /2;
     justify-self: center;
     box-shadow: 0 0 15px var(--cor-destaque1);
+    object-fit: contain;
 }
 
 .paragrafo1 {
     grid-area: 2 /1;
+    padding: 0 16px;
 }
 
 .paragrafo2 {
     grid-area: 2 /3;
+    padding: 0 16px;
 }
 
 .aventura,
@@ -199,19 +340,22 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
 }
 
-section h2 {
+.aventura h2,
+.funcionarios h2 {
     grid-area: span 1 /5 span;
     text-align: center;
     margin-top: 32px;
     margin-bottom: 32px;
 }
 
-section figure {
+.aventura figure,
+.funcionarios figure {
     padding-bottom: 32px;
     padding-top: 32px;
 }
 
-section figure img {
+.aventura figure img,
+.funcionarios figure img {
     width: 70%;
     display: block;
     justify-self: center;
@@ -248,6 +392,4 @@ footer nav {
 footer nav img {
     width: 30px;
     margin-right: 8px;
-    /* padding: 8px; */
-    /* padding: 0 16px 0 16px; */
 }
